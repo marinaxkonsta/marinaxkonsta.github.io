@@ -1,15 +1,15 @@
 <script>
   (function(d,t) {
     var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src="https://test.ca.one-stop-talk.stg.gcp.trchq.com/embed.js"
+    g.src="http://app.chaskiq.test:3000/embed.js"
     s.parentNode.insertBefore(g,s);
     g.onload=function(){
       new window.VirtualCareMessengerEncrypted({
-        domain: 'https://test.ca.one-stop-talk.stg.gcp.trchq.com',
-        ws:  'wss://test.ca.one-stop-talk.stg.gcp.trchq.com/cable',
-        app_id: "D2p3uNwqDtu7pknnG5WAZB6Q",
+        domain: 'http://app.chaskiq.test:3000',
+        ws:  'ws://app.chaskiq.test:3000/cable',
+        app_id: "6fyShfxENFs1oQzHKdxixjhK",
         data: {},
-        lang: "lang" 
+        lang: "USER_LANG_OR_DEFAULTS_TO_BROWSER_LANG" 
       })
     }
   })(document,"script");
