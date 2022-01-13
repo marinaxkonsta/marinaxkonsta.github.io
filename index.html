@@ -1,0 +1,16 @@
+<script>
+  (function(d,t) {
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src="https://test.ca.one-stop-talk.stg.gcp.trchq.com/embed.js"
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      new window.VirtualCareMessengerEncrypted({
+        domain: 'https://test.ca.one-stop-talk.stg.gcp.trchq.com',
+        ws:  'wss://test.ca.one-stop-talk.stg.gcp.trchq.com/cable',
+        app_id: "D2p3uNwqDtu7pknnG5WAZB6Q",
+        data: {},
+        lang: "lang" 
+      })
+    }
+  })(document,"script");
+</script>
