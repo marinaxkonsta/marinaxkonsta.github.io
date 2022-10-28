@@ -1,16 +1,20 @@
 <script>
   (function(d,t) {
-      var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=`https://c902-99-228-53-164.ngrok.io/embed.js`
-      s.parentNode.insertBefore(g,s);
-      g.onload=function(){
-        window.virtualCareMessenger = new window.VirtualCareMessengerEncrypted({
-          domain: 'https://c902-99-228-53-164.ngrok.io',
-          ws:  'wss://c902-99-228-53-164.ngrok.io/cable',
-          data: {"email":"test@test.cl","properties":{"name":"Alex","lang":"en","id":"localhost","country":"Canada","role":"admin","pro":null,"num_devices":2,"plan":"pro","last_sign_in":"2022-09-20T15:57:35.348Z"},"identifier_key":"5f694e459d05af717250bb9acbc8240ab58830fa2bd199cbf96f6fc866ab9b93"},
-          lang: "",
-          app_id: "yUrzFJzkacSmbPX789BKAk8w"
-        })
-      }
-    })(document,"script");
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src="https://test.ca.one-stop-talk.dev.gcp.trchq.com/embed.js"
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      new window.VirtualCareMessengerEncrypted({
+        domain: 'https://test.ca.one-stop-talk.dev.gcp.trchq.com',
+        ws:  'wss://test.ca.one-stop-talk.dev.gcp.trchq.com/cable',
+        app_id: "XhaeaVJPLz73QUMP5LzFrTt9",
+        data: {
+          email: "user@email.com",
+          identifier_key: "INSERT_HMAC_VALUE_HERE",
+          properties: { }
+        },
+        lang: "USER_LANG_OR_DEFAULTS_TO_BROWSER_LANG" 
+      })
+    }
+  })(document,"script");
 </script>
