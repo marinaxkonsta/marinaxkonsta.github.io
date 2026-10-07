@@ -2,7 +2,13 @@
 <html>
 <head>
     <!-- External QA page -->
-    <%= vite_react_refresh_preamble %>
+    <script type="module">
+      import RefreshRuntime from 'http://trc.dfd.com/assets/@react-refresh';
+      RefreshRuntime.injectIntoGlobalHook(window);
+      window.$RefreshReg$ = () => {};
+      window.$RefreshSig$ = () => (type) => type;
+      window.__vite_plugin_react_preamble_installed__ = true;
+    </script>
 </head>
 <body>
   <script>
