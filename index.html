@@ -12,9 +12,9 @@
       s.parentNode.insertBefore(g,s);
       g.onload=function(){
           window.virtualCareMessenger = new window.VirtualCareMessengerEncrypted({
-            domain: '<%= Chaskiq::Config.get('HOST') %>',
-            ws:  '<%= Chaskiq::Config.get('WS') %>',
-            app_id: "<%= @app.key %>"
+            domain: 'https://trc.dfd.com/',
+            ws:  'wss://trc.dfd.com/cable',
+            app_id: "KRo7YDYUsXQ6va5Xvo64tXVn"
           })
         }
     })(document,"script");
