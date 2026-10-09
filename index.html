@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html>
+<!-- <html>
 <head>
-    <!-- External QA page -->
     <script type="module">
       import RefreshRuntime from 'https://trc.dfd.com/assets/@react-refresh';
       RefreshRuntime.injectIntoGlobalHook(window);
@@ -27,4 +26,109 @@
     })(document,"script");
   </script>
 </body>
-</html>
+</html> -->
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" media="(device-height: 568px)" name="viewport">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-4"> 
+        <div class="row">
+            
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="host" class="form-label">Host</label>
+                    <input type="text" class="form-control" id="host" value="trc.dfd.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="app_key" class="form-label">App Key</label>
+                    <input type="text" class="form-control" id="app_key" value="NKubX8qcG34kVPYPNEabB5A5">
+                </div>
+
+                <div class="mb-3">
+                    <label for="language" class="form-label">Language</label>
+                    <input type="text" class="form-control" id="language" value="en">
+                </div>
+
+                <div class="mb-3">
+                    <label for="identifier_key" class="form-label">Identifier Key</label>
+                    <input type="text" class="form-control" id="identifier_key">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email">
+                <div data-lastpass-icon-root="" data-lastpass-icon-for="email" style="position: relative !important; height: 0px !important; width: 0px !important; display: initial !important; float: left !important;"><template shadowrootmode="closed"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-lastpass-icon="true" data-testid="infield-icon" style="position: absolute; cursor: pointer; height: 22px; max-height: 22px; width: 22px; max-width: 22px; top: -30px; left: 377px; z-index: auto; color: rgb(215, 64, 58);"><rect x="0.680176" y="0.763062" width="22.6392" height="22.4737" rx="4" fill="currentColor"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M19.7935 7.9516C19.7935 7.64414 20.0427 7.3949 20.3502 7.3949C20.6576 7.3949 20.9069 7.64414 20.9069 7.9516V16.0487C20.9069 16.3562 20.6576 16.6054 20.3502 16.6054C20.0427 16.6054 19.7935 16.3562 19.7935 16.0487V7.9516Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.76288 13.6577C5.68525 13.6577 6.43298 12.9154 6.43298 11.9998C6.43298 11.0842 5.68525 10.3419 4.76288 10.3419C3.8405 10.3419 3.09277 11.0842 3.09277 11.9998C3.09277 12.9154 3.8405 13.6577 4.76288 13.6577Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3298 13.6577C11.2521 13.6577 11.9999 12.9154 11.9999 11.9998C11.9999 11.0842 11.2521 10.3419 10.3298 10.3419C9.4074 10.3419 8.65967 11.0842 8.65967 11.9998C8.65967 12.9154 9.4074 13.6577 10.3298 13.6577Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.8964 13.6577C16.8188 13.6577 17.5665 12.9154 17.5665 11.9998C17.5665 11.0842 16.8188 10.3419 15.8964 10.3419C14.974 10.3419 14.2263 11.0842 14.2263 11.9998C14.2263 12.9154 14.974 13.6577 15.8964 13.6577Z" fill="white"></path></svg></template></div></div>
+                <div class="mb-3">
+                    <label for="first_name" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="first_name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="last_name" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="last_name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="mode" class="form-label">Mode</label>
+                    <select class="form-select" id="mode">
+                        <option selected="">embedded</option>
+                        <option value="default">Default</option>
+                        <option value="embedded">Embedded</option>
+                    </select>
+                </div>
+                <button type="submit" id="start" class="btn btn-primary w-100">Start</button>
+            </div>
+
+            <div class="col-md-8">
+                <div id="parent_container" style="overflow: auto; border-radius: 4px; border: 1px solid #ced4da; height: 100%; min-height: 600px;"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        var btn = document.getElementById("start");
+        btn.addEventListener('click', function() {
+            var host = document.getElementById("host").value;
+            var app_key = document.getElementById("app_key").value;
+            var email = document.getElementById("email").value;
+            var identifier_key = document.getElementById("identifier_key").value;
+            var first_name = document.getElementById("first_name").value;
+            var last_name = document.getElementById("last_name").value;
+            var language = document.getElementById("language").value;
+            var mode = document.getElementById("mode").value;
+
+            var data = {
+                email: email,
+                identifier_key: identifier_key,
+                properties: {
+                    first_name: first_name,
+                    last_name: last_name
+                },
+            };
+
+            var g = document.createElement('script'),
+                s = document.getElementsByTagName('script')[0];
+            g.src = "https://" + host + "/embed.js";
+            s.parentNode.insertBefore(g, s);
+            g.onload = function() {
+                window.virtualCareMessenger = new window.VirtualCareMessengerEncrypted({
+                    domain: "https://" + host,
+                    ws: "wss://" + host + "/cable",
+                    data: data,
+                    lang: language,
+                    app_id: app_key,
+                    mode: mode,
+                    wrapperId: 'parent_container'
+                })
+            };
+        });
+    </script>
